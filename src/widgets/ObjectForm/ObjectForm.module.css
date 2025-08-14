@@ -1,0 +1,20 @@
+.form { margin-bottom: 12px; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.field, .fieldWide { display: flex; flex-direction: column; gap: 6px; }
+.field input, .fieldWide input {
+  height: 40px; border: 1px solid #cfe0ff; border-radius: 10px; padding: 0 12px;
+  outline: none;
+}
+.fieldWide { grid-column: 1 / -1; }
+
+.err { color: #e54848; font-size: 12px; }
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

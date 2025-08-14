@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 700;
+}
+
+.createBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(63.18deg, #1bbabc 0%, #4c4cff 100%);
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  font-size: clamp(14px, 2vw, 18px);
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.createBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+}
+
+.createIcon {
+  width: 20px;
+  height: 20px;
+  mask: url('@/app/assets/icons/plus_20.svg') no-repeat center;
+  -webkit-mask: url('@/app/assets/icons/plus_20.svg') no-repeat center;
+  background-color: #fff;
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #666;
+  text-align: center;
+  padding: 40px;
+}
+
+.emptyTitle { font-size: clamp(16px, 2vw, 18px); font-weight: 500; }
+.emptyText { font-size: clamp(12px, 2vw, 14px); }

@@ -1,0 +1,65 @@
+.header {
+  width: 100%;
+  max-width: 1840px;
+  height: 64px;
+  background-color: #050d43;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.header__logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 50px;
+  height: 36px;
+  mask: url('/src/app/assets/icons/logo.svg') no-repeat center;
+  -webkit-mask: url('/src/app/assets/icons/logo.svg') no-repeat center;
+  background-color: #ffffff;
+}
+
+.header__logoText {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__gridButton {
+  width: 24px;
+  height: 24px;
+  mask: url('/src/app/assets/icons/button-grid.svg') no-repeat center;
+  -webkit-mask: url('/src/app/assets/icons/button-grid.svg') no-repeat center;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.header__gridButton:hover {
+  opacity: 0.8;
+}
+
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #00eeff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
