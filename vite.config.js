@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import svgr from 'vite-plugin-svgr';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/my-profgeo-app/' : '/',
   plugins: [react(), svgr()],
   resolve: {
     alias: {
@@ -11,7 +12,7 @@ export default defineConfig({
       '@app': path.resolve(__dirname, './src/app'),
       '@widgets': path.resolve(__dirname, './src/widgets'),
       '@pages': path.resolve(__dirname, './src/pages'),
-      '@shared': path.resolve(__dirname, './src/shared'), // Добавляем алиас
+      '@shared': path.resolve(__dirname, './src/shared'),
     },
   },
-});
+}));
