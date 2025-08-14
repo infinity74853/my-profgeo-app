@@ -20,25 +20,40 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Шапка */}
       <Header />
+
+      {/* Заголовок страницы */}
       <TitleContainer />
 
+      {/* Основной контент */}
       <Routes>
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<Home />} />
+
+          {/* Объекты */}
           <Route path="objects" element={<ObjectsList />} />
           <Route path="objects/create" element={<CreateObject />} />
+
+          {/* Личный кабинет */}
           <Route path="account" element={<Account />} />
           <Route path="subscription" element={<Subscription />} />
           <Route path="users" element={<Users />} />
           <Route path="settings" element={<Settings />} />
-          <Route path="*" element={<div style={{ padding: 24 }}>Страница не найдена</div>} />
+
+          {/* 404 */}
+          <Route
+            path="*"
+            element={<div style={{ padding: 24 }}>Страница не найдена</div>}
+          />
         </Route>
       </Routes>
 
+      {/* Уведомления */}
       <ToastContainer position="bottom-right" autoClose={5000} />
     </div>
   );
 };
 
 export default App;
+

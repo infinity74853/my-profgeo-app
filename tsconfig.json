@@ -19,6 +19,7 @@
     "paths": {
       "@/*": ["*"],
       "@app/*": ["app/*"],
+      "@features/*": ["features/*"],
       "@widgets/*": ["widgets/*"],
       "@pages/*": ["pages/*"]
     }

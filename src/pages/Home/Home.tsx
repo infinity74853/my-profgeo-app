@@ -1,5 +1,5 @@
 import { useAppSelector, useAppDispatch } from '@/app/hooks';
-import { ObjectForm } from '@/widgets/ObjectForm/ObjectForm';
+import ObjectForm, { FormValues } from "@widgets/ObjectForm/ObjectForm";
 import { showCreateForm } from '@/features/object-management/slices/objectFormSlice';
 import styles from './Home.module.css';
 
@@ -14,10 +14,13 @@ const Home = () => {
   return (
     <>
       {showObjectForm ? (
-        <ObjectForm onSubmit={function (data: { name: string; code: string; contractNumber: string; contractDate: string; designation: string; customer: string; contractor: string; }): void {
-          throw new Error('Function not implemented.');
-        } } />
-      ) : (
+  <ObjectForm
+    onSubmit={(data: FormValues) => {
+      // пока просто лог
+      console.log("Форма отправлена:", data);
+    }}
+  />
+) : (
         <>
           <div className={styles.content__header}>
             <h2 className={styles.content__title}>Объекты</h2>

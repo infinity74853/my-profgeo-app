@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => ({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@app': path.resolve(__dirname, './src/app'),
+      '@features': path.resolve(__dirname, 'src/features'),
       '@widgets': path.resolve(__dirname, './src/widgets'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@shared': path.resolve(__dirname, './src/shared'),
