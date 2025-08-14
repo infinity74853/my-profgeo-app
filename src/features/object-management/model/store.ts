@@ -1,31 +1,48 @@
-import { createStore, createEvent, sample } from 'effector';
+import { createStore, createEvent, createEffect, sample } from 'effector';
 import { api } from '@/shared/api/Api';
 import type { ObjectFormData, TableItem } from './types';
 
-// События
+// ===== События =====
 export const formSubmitted = createEvent<ObjectFormData>();
 export const tableRowAdded = createEvent<Partial<TableItem>>();
-export const tableRowUpdated = createEvent<{id: string; data: Partial<TableItem>}>();
+export const tableRowUpdated = createEvent<{ id: string; data: Partial<TableItem> }>();
 export const tablePageChanged = createEvent<number>();
 
-// Сторы
-export const $objectForm = createStore<ObjectFormData>({...});
-export const $tableData = createStore<TableItem[]>([]);
+// ===== Эффекты =====
+export const submitFormFx = createEffect<ObjectFormData, TableItem>(async (formData) => {
+  // Здесь вызываем метод API, который создаёт объект
+  return await api.createObject<TableItem>(formData);
+});
+
+export const importTableDataFx = createEffect<FormData, TableItem[]>(async (file) => {
+  return await api.importTableData<TableItem[]>(file);
+});
+
+// ===== Сторы =====
+export const $objectForm = createStore<ObjectFormData>({
+  id: '',
+  name: '',
+  description: '',
+  createdAt: ''
+});
+
+export const $tableData = createStore<TableItem[]>([])
+  .on(submitFormFx.doneData, (state, newItem): TableItem[] => {
+    const index = state.findIndex((item) => item.id === newItem.id);
+    if (index >= 0) {
+      const updated = [...state];
+      updated[index] = newItem;
+      return updated;
+    }
+    return [...state, newItem];
+  });
+
 export const $currentPage = createStore(1);
 export const $totalPages = createStore(1);
 
-// Эффекты
-const submitFormFx = createEffect(async (formData: ObjectFormData) => {
-  return await api.createObject(formData);
-});
-
-// Логика
+// ===== Логика =====
 sample({
   clock: formSubmitted,
   target: submitFormFx
 });
 
-export const importTableDataFx = createEffect(async (file: FormData) => {
-  const response = await api.importTableData(file);
-  return response.data;
-});
