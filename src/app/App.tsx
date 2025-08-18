@@ -5,6 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "@widgets/Header/Header";
 import TitleContainer from "@widgets/TitleContainer/TitleContainer";
 import HomeLayout from "@pages/Home/HomeLayout";
+import WorkLayout from "@widgets/Work/WorkLayout";
+import WorkHome from "@pages/Work/WorkHome";
 
 import Home from "@pages/Home/Home";
 import ObjectsList from "@pages/Objects/ObjectsList";
@@ -18,7 +20,7 @@ import Welcome from "@pages/Welcome/Welcome";
 import Login from "@pages/Auth/Login";
 import Register from "@pages/Auth/Register";
 
-import ProtectedRoute from "@app/providers/ProtectedRoute"; // ✅ вынесено отдельно
+import ProtectedRoute from "@app/providers/ProtectedRoute";
 
 import "@app/styles/index.css";
 import "./App.css";
@@ -40,6 +42,7 @@ const App: React.FC = () => {
         <Route path="/register" element={<Register />} />
 
         {/* Защищённые маршруты */}
+        {/* Личный кабинет */}
         <Route
           path="/lk"
           element={
@@ -56,16 +59,21 @@ const App: React.FC = () => {
           <Route path="users" element={<Users />} />
           <Route path="settings" element={<Settings />} />
         </Route>
-
+        
+        {/* Рабочий кабинет */}
         <Route
           path="/work"
           element={
             <ProtectedRoute>
-              {/* Временно пустая страница */}
-              <div style={{ padding: 40 }} />
+              <WorkLayout />
             </ProtectedRoute>
           }
-        />
+        >
+        <Route index element={<WorkHome />} />
+          <Route path="app1" element={<div>Приложение 1</div>} />
+          <Route path="app2" element={<div>Приложение 2</div>} />
+          <Route path="app3" element={<div>Приложение 3</div>} />
+        </Route>
 
         {/* 404 */}
         <Route path="*" element={<div style={{ padding: 24 }}>Страница не найдена</div>} />

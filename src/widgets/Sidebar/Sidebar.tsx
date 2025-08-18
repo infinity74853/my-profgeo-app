@@ -11,7 +11,7 @@ const Sidebar: React.FC = () => {
       <div className={styles.sidebar__menuContainer}>
         <ul className={styles.sidebar__menu}>
           <li>
-            <NavLink to="/" className={({ isActive }) => `${styles.sidebar__menuItem} ${isActive ? styles.active : ""}`}>
+            <NavLink to="/lk" className={({ isActive }) => `${styles.sidebar__menuItem} ${isActive ? styles.active : ""}`}>
               <div className={`${styles.sidebar__icon} ${styles.sidebar__iconList}`} />
               <span>Объекты</span>
             </NavLink>
