@@ -25,6 +25,12 @@ import ProtectedRoute from "@app/providers/ProtectedRoute";
 import "@app/styles/index.css";
 import "./App.css";
 
+import ModuleExcelEditor from "@/pages/Work/modules/excel/ModuleExcelEditor";
+
+import ModuleExcelJS from "@/pages/Work/modules/ModuleExcelJS";
+import ModuleExcelRenderer from "@/pages/Work/modules/ModuleExcelRenderer";
+import ModuleXLSX from "@/pages/Work/modules/ModuleXLSX";
+
 const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -63,16 +69,16 @@ const App: React.FC = () => {
         {/* Рабочий кабинет */}
         <Route
           path="/work"
-          element={
-            <ProtectedRoute>
-              <WorkLayout />
-            </ProtectedRoute>
-          }
-        >
-        <Route index element={<WorkHome />} />
-          <Route path="app1" element={<div>Приложение 1</div>} />
-          <Route path="app2" element={<div>Приложение 2</div>} />
-          <Route path="app3" element={<div>Приложение 3</div>} />
+            element={
+              <ProtectedRoute>
+                <WorkLayout />
+              </ProtectedRoute>
+            }
+          >
+          <Route index element={<WorkHome />} />
+          <Route path="app1" element={<ModuleExcelEditor />} />
+          <Route path="app2" element={<ModuleExcelJS />} />
+          <Route path="app3" element={<ModuleExcelRenderer />} />
         </Route>
 
         {/* 404 */}

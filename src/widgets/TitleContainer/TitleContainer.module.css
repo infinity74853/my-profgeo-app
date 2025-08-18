@@ -12,6 +12,13 @@
 }
 
 .title-container__text {
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(30px, 2vw, 28px);
   font-weight: 700;
+  color: red;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; } /* Видимый */
+  50% { opacity: 0; }      /* Невидимый */
 }

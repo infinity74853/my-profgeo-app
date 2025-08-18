@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logout } from "@features/auth/authSlice";
+import { logout } from "@/features/auth/model/authSlice";
 import styles from "./Sidebar.module.css";
 
 const Sidebar: React.FC = () => {

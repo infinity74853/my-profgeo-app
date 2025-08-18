@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logout } from "@features/auth/authSlice";
+import { logout } from "@/features/auth/model/authSlice";
 import styles from "./WorkSidebar.module.css";
 
 const WorkSidebar: React.FC = () => {
@@ -25,7 +25,7 @@ const WorkSidebar: React.FC = () => {
               }
             >
               <div className={`${styles.sidebar__icon} ${styles.sidebar__iconList}`} />
-              <span>Кнопка 1</span>
+              <span>Модуль1 - ModuleExcelEditor</span>
             </NavLink>
           </li>
 
@@ -37,7 +37,7 @@ const WorkSidebar: React.FC = () => {
               }
             >
               <div className={`${styles.sidebar__icon} ${styles.sidebar__iconList}`} />
-              <span>Кнопка 2</span>
+              <span>Модуль2 - ExcelJS</span>
             </NavLink>
           </li>
 
@@ -49,7 +49,7 @@ const WorkSidebar: React.FC = () => {
               }
             >
               <div className={`${styles.sidebar__icon} ${styles.sidebar__iconList}`} />
-              <span>Кнопка 3</span>
+              <span>Модуль3 - React-Excel-Renderer</span>
             </NavLink>
           </li>
         </ul>

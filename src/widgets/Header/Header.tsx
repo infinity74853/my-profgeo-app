@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@app/store";
-import { logout } from "@features/auth/authSlice";
+import { logout } from "@/features/auth/model/authSlice";
 import styles from "./Header.module.css";
 
 const Header: React.FC = () => {
