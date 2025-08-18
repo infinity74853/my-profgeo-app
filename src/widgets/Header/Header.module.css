@@ -1,23 +1,24 @@
 .header {
   width: 100%;
   max-width: 1840px;
-  height: 64px;
+  height: 100px;
   background-color: #050d43;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
 .header__logoContainer {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .header__logo {
-  width: 50px;
-  height: 36px;
+  width: 60px;
+  height: 60px;
   mask: url('/src/app/assets/icons/logo.svg') no-repeat center;
   -webkit-mask: url('/src/app/assets/icons/logo.svg') no-repeat center;
   background-color: #ffffff;
@@ -25,41 +26,197 @@
 
 .header__logoText {
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   margin-left: 8px;
 }
 
-.header__actions {
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__navButtons {
+  display: flex;
+  align-items: center;
+  gap: 20px;  
+}
+
+.header__navButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid #00eeff;
+  border-radius: 10px;
+  min-height: 44px;
+  padding-inline: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s, background-color 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+
+.header__navButton:hover {
+  background-color: #00eeff33;
+}
+
+.header__icon {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+}
+
+.header__lkIcon {
+  mask: url('/src/app/assets/icons/lk.svg') no-repeat center;
+  -webkit-mask: url('/src/app/assets/icons/lk.svg') no-repeat center;
+}
+
+.header__gridIcon {
+  mask: url('/src/app/assets/icons/button-grid.svg') no-repeat center;
+  -webkit-mask: url('/src/app/assets/icons/button-grid.svg') no-repeat center;
+}
+
+.header__userBlock {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: 20px;
+  padding-left: 100px;
 }
 
-.header__gridButton {
-  width: 24px;
-  height: 24px;
-  mask: url('/src/app/assets/icons/button-grid.svg') no-repeat center;
-  -webkit-mask: url('/src/app/assets/icons/button-grid.svg') no-repeat center;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.header__gridButton:hover {
-  opacity: 0.8;
+.header__userName {
+  color: #fff;
+  font-size: 16px;
+  max-width: 150px; /* ограничение */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header__avatar {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #00eeff;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #000;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
+}
+
+/* === Состояния кнопок === */
+.header__navButton--active {
+  background-color: transparent;
+  border-color: #00eeff;
+  color: #fff;
+}
+
+.header__navButton--inactive {
+  background-color: transparent;
+  border-color: #6d6d6d;
+  color: #6d6d6d;
+}
+
+.header__navButton--inactive {
+  background-color: transparent;
+  border-color: #6d6d6d;
+  color: #6d6d6d;
+}
+
+.active {
+  background-color: #00eeff;
+  color: #000;
+}
+
+.active .header__icon {
+  background-color: #000;
+}
+
+.userMenu {
+  position: absolute;
+  top: 90px;
+  right: 200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.userMenuItem {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #050d43;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.userMenuItem:hover {
+  background: #f0f0f0;
+}
+
+/* Меню */
+.header__menu {
+  position: absolute;
+  top: 90px;
+  right: 200px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  min-width: 180px;
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header__menu--open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.header__menuItem {
+  padding: 12px 16px;
+  color: #050d43;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.header__menuItem:hover {
+  background-color: #b6d5fc;
+}
+
+.header__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #00eeff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.header__avatar:focus {
+  box-shadow: 0 0 0 2px #00eeff88;
 }

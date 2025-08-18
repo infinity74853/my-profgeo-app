@@ -47,5 +47,3 @@ const CreateObject: React.FC = () => {
 };
 
 export default CreateObject;
-
-
