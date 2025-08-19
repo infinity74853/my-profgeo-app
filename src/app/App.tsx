@@ -6,7 +6,6 @@ import Header from "@widgets/Header/Header";
 import TitleContainer from "@widgets/TitleContainer/TitleContainer";
 import HomeLayout from "@pages/Home/HomeLayout";
 import WorkLayout from "@widgets/Work/WorkLayout";
-import WorkHome from "@pages/Work/WorkHome";
 
 import Home from "@pages/Home/Home";
 import ObjectsList from "@pages/Objects/ObjectsList";
@@ -26,10 +25,6 @@ import "@app/styles/index.css";
 import "./App.css";
 
 import ModuleExcelEditor from "@/pages/Work/modules/excel/ModuleExcelEditor";
-
-import ModuleExcelJS from "@/pages/Work/modules/ModuleExcelJS";
-import ModuleExcelRenderer from "@/pages/Work/modules/ModuleExcelRenderer";
-import ModuleXLSX from "@/pages/Work/modules/ModuleXLSX";
 
 const App: React.FC = () => {
   return (
@@ -74,11 +69,8 @@ const App: React.FC = () => {
                 <WorkLayout />
               </ProtectedRoute>
             }
-          >
-          <Route index element={<WorkHome />} />
-          <Route path="app1" element={<ModuleExcelEditor />} />
-          <Route path="app2" element={<ModuleExcelJS />} />
-          <Route path="app3" element={<ModuleExcelRenderer />} />
+          >          
+          <Route path="app1" element={<ModuleExcelEditor />} />          
         </Route>
 
         {/* 404 */}

@@ -13,7 +13,7 @@ const TitleContainer: React.FC = () => {
   } else if (location.pathname.startsWith("/work")) {
     title = "Перечень графических приложений";
   } else {
-    title = 'Женя, после входа на сайт нажми Рабочий кабинет и выбери Модуль1';
+    title = 'Страница пользователя';
   }
 
   return (
