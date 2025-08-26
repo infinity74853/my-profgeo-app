@@ -1,13 +1,12 @@
 .header {
   width: 100%;
   max-width: 1840px;
-  height: 100px;
-  background-color: #050d43;
+  height: 60px;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  margin: 0 auto;
+  padding: 0 40px;  
 }
 
 .header__logoContainer {
@@ -47,7 +46,7 @@
   align-items: center;
   gap: 8px;
   background: none;
-  border: 1px solid #00eeff;
+  border: 1px solid #ff9f40;
   border-radius: 10px;
   min-height: 44px;
   padding-inline: 10px;
@@ -112,7 +111,7 @@
 /* === Состояния кнопок === */
 .header__navButton--active {
   background-color: transparent;
-  border-color: #00eeff;
+  border-color: #ffdfc3;
   color: #fff;
 }
 
@@ -190,7 +189,7 @@
 
 .header__menuItem {
   padding: 12px 16px;
-  color: #050d43;
+  color: #000;
   font-size: 15px;
   text-decoration: none;
   display: block;
@@ -202,15 +201,15 @@
 }
 
 .header__avatar {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: #00eeff;
+  background-color: #3D6BFF;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   border: none;

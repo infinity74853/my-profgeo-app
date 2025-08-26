@@ -1,0 +1,28 @@
+.group {
+  display: inline-flex;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.button {
+  padding: 8px 12px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.button:not(:last-child) {
+  border-right: 1px solid #d1d5db;
+}
+
+.button:hover {
+  background: #f3f4f6;
+}
+
+.active {
+  background: #2563eb;
+  color: white;
+}

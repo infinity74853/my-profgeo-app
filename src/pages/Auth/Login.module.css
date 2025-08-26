@@ -1,0 +1,56 @@
+.container {
+  min-height: calc(100vh - 0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  background: #fff;
+}
+
+.authBox {
+  width: 100%;
+  max-width: 420px;
+  background: transparent;
+  border-radius: 16px;
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 20px;
+  font: 600 28px/1.2 Roboto, Helvetica, Arial, sans-serif;
+  color: #1e1e1e;
+}
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.label {
+  color: #526176;
+  font: 500 12px/12px Roboto, Helvetica, Arial, sans-serif;
+}
+
+.input {
+  border: 1px solid #97aec6;
+  border-radius: 13px;
+  padding: 14px 12px;
+}
+
+/* Кнопка Войти */
+.submit {
+  margin-top: 8px;
+  width: 100%;
+  height: 46px;
+  border-radius: 1000px;
+  background: #164dff;
+  color: #fff;
+  font-weight: 600;
+}
+.submit:hover { filter: brightness(0.95); }
+
+/* Низ */
+.footer { margin-top: 12px; text-align: left; color: #526176; }
+.footer a { color: #164dff; }
+.footer a:hover { text-decoration: underline; }
+
+

@@ -1,27 +1,14 @@
-.container {
-  margin-bottom: 1rem;
-}
-
-.label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
 .input {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
-.error {
-  border-color: #ff0000;
-}
-
-.errorMessage {
-  color: #ff0000;
-  font-size: 0.8rem;
-  margin-top: 0.25rem;
-  display: block;
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
 }

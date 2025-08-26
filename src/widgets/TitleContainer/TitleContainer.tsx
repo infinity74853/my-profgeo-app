@@ -6,6 +6,11 @@ const TitleContainer: React.FC = () => {
   const location = useLocation();
   const isAuthenticated = useSelector((state: any) => state.auth.isAuthenticated);
 
+  // Если на странице /login или /register — вообще ничего не рендерим
+  if (location.pathname === "/login" || location.pathname === "/register") {
+    return null;
+  }
+
   let title = "";
 
   if (!isAuthenticated) {
@@ -13,7 +18,7 @@ const TitleContainer: React.FC = () => {
   } else if (location.pathname.startsWith("/work")) {
     title = "Перечень графических приложений";
   } else {
-    title = 'Страница пользователя';
+    title = "Страница пользователя";
   }
 
   return (
@@ -24,5 +29,6 @@ const TitleContainer: React.FC = () => {
 };
 
 export default TitleContainer;
+
 
 

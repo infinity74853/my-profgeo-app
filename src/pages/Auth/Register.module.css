@@ -1,0 +1,185 @@
+.page {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  min-height: calc(100vh - 0px);
+  background: #fff;
+  width: 100%;
+  max-width: 1840px;
+}
+
+/* Левая колонка */
+.left {
+  flex: 1 1 640px;
+  max-width: 647px;
+  padding: 60px;
+}
+
+.backRow {
+  margin-bottom: 200px;
+}
+
+.backBtn {
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  -webkit-mask: url('@/app/assets/icons/arrow-left.svg') no-repeat center;
+  mask: url('@/app/assets/icons/arrow-left.svg') no-repeat center;  
+  border: none;
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  background-color: #000000;
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  max-width: 587px;
+}
+
+.logoRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoDot {
+  width: 60px;
+  height: 60px;
+  mask: url('/src/app/assets/icons/logo.svg') no-repeat center;
+  -webkit-mask: url('/src/app/assets/icons/logo.svg') no-repeat center;
+  background-color: #000;  
+}
+
+.logoText { 
+  font-family: Roboto, Helvetica, Arial, sans-serif; 
+  font-size: 22px; 
+  color: #1e1e1e; 
+}
+
+.title {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #1e1e1e;
+  margin: 40px 0;
+}
+
+/* Сегментированный переключатель */
+.segment {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  background: #d6e1ec;
+  border-radius: 13px;
+  gap: 0;
+  margin-bottom: 30px;
+  max-width: 70%;
+}
+
+.segmentItem {
+  border: none;
+  background: transparent;
+  padding: 9px 14px;
+  border-radius: 11px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #7b94b1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.segmentItemActive {
+  background: #fff;
+  color: #1e1e1e;
+}
+
+/* Форма */
+.form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 40px; 
+  width: 100%; 
+  max-width: 587px; }
+
+.row { 
+  display: flex; 
+  gap: 18px; 
+  width: 100%; 
+}
+
+.field { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  flex: 1 1 0; }
+
+.label {
+  color: #526176;
+  font: 500 12px/12px Roboto, Helvetica, Arial, sans-serif;
+}
+
+.inputAuth {  
+  border: 1px solid #728caa;
+  border-radius: 20px;
+  padding: 14px 12px;
+  height: 48px;
+}
+
+/* Чекбокс и политика */
+.checkboxRow { display: flex; align-items: flex-start; gap: 10px; }
+.checkboxLabel { color: #526176; font: 500 15px/19.5px "SF Pro Display", Helvetica, Arial, sans-serif; }
+.link { text-decoration: underline; color: #526176; }
+.link:hover { color: #164dff; }
+
+/* Кнопка Далее */
+.submit {
+  width: 100%;
+  height: 48px;
+  border-radius: 50px;
+  border: none;
+  background: #d6e1ec;
+  color: #000000;
+  font-weight: 600;
+}
+.submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.submit:not(:disabled):hover { background: #c5d4e1; }
+
+/* “Уже есть аккаунт” */
+.haveAccount { margin-top: 4px; color: #526176; }
+.haveAccount a { color: #164dff; }
+.haveAccount a:hover { text-decoration: underline; }
+
+/* Правая колонка */
+.right {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 16px;
+}
+
+.screenshotCard {
+  width: 100%;
+  max-width: 1082px;
+  background: #000;
+  border-radius: 32px;
+  overflow: hidden;
+  aspect-ratio: 16/15; /* близко к вашему макету */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screenshotImg {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+

@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 100px); /* минус высота хедера */
-  background-color: #f0f0f0;
+  margin: 100px;  
+  
 }
 
 .welcome__image {

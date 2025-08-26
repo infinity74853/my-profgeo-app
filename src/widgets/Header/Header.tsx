@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         <div className={styles.header__navButtons}>
           {isAuthenticated ? (
             <>
-              <Link
+              {/* <Link
                 to="/lk"
                 className={`${styles.header__navButton} ${activeButton === "lk" ? styles["header__navButton--active"] : styles["header__navButton--inactive"]}`}
                 onClick={() => setActiveButton("lk")}
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
               >
                 <div className={`${styles.header__icon} ${styles.header__gridIcon}`} />
                 <span>Рабочий кабинет</span>
-              </Link>
+              </Link> */}
             </>
           ) : (
             <>
