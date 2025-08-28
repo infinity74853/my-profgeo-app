@@ -9,6 +9,7 @@ import { Input } from "@/shared/ui/Input/Input";
 import { Label } from "@/shared/ui/Label/Label";
 
 import styles from "./Register.module.css";
+import imageUrl from "@app/assets/auth.png";
 
 const Login = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -81,8 +82,10 @@ const Login = () => {
         </div>
 
         {/* Правая часть — картинка */}
-        <div className={styles.imageSide}>
-          <img src="src\app\assets\Image.png" alt="Вход" />
+        <div className={styles.right}>
+          <div className={styles.screenshotCard}>
+            <img src={imageUrl} alt="Preview" className={styles.screenshotImg} />
+          </div>
         </div>
       </div>    
   );

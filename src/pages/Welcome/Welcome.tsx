@@ -1,5 +1,5 @@
 import "./Welcome.css";
-import hero from "@app/assets/hero.png"; // кладём картинку в src/app/assets/
+import hero from "@app/assets/hero.png";
 
 const Welcome = () => {
   return (

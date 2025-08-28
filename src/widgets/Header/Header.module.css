@@ -46,7 +46,7 @@
   align-items: center;
   gap: 8px;
   background: none;
-  border: 1px solid #ff9f40;
+  border: 1px solid #00eeff;
   border-radius: 10px;
   min-height: 44px;
   padding-inline: 10px;
@@ -111,7 +111,7 @@
 /* === Состояния кнопок === */
 .header__navButton--active {
   background-color: transparent;
-  border-color: #ffdfc3;
+  border-color: #ffdfc36f;
   color: #fff;
 }
 
@@ -218,4 +218,23 @@
 
 .header__avatar:focus {
   box-shadow: 0 0 0 2px #00eeff88;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header__navButtons {
+    gap: 6px;
+  }
+
+  .header__logo {
+    width: 20px;
+    height: 40px;
+  }
+
+  .backRow {
+    margin-bottom: 20px;
+  }
 }

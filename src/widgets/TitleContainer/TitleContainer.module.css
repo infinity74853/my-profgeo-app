@@ -8,6 +8,12 @@
   justify-content: center;
   border-radius: 25px;
   padding: 0 40px;
-  margin: 40px auto;
+  margin: 40px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    font-size: 10px;
+  }
 }

@@ -6,7 +6,7 @@ import { Input } from "@/shared/ui/Input/Input";
 import { Checkbox } from "@/shared/ui/Checkbox/Checkbox";
 import { Label } from "@/shared/ui/Label/Label";
 
-import imageUrl from "@/app/assets/Image.png";
+import imageUrl from "@/app/assets/auth.png";
 import styles from "./Register.module.css";
 
 const Register = () => {
